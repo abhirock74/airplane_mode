@@ -6,7 +6,9 @@
  "engine": "InnoDB",
  "field_order": [
   "name1",
-  "email"
+  "email",
+  "phone_number",
+  "address"
  ],
  "fields": [
   {
@@ -21,11 +23,23 @@
    "fieldtype": "Data",
    "label": "Email",
    "reqd": 1
+  },
+  {
+   "default": "+91-",
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-01 17:43:02.033042",
+ "modified": "2024-05-01 17:51:40.090371",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Tenant",

@@ -5,6 +5,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "tenant",
+  "shop",
   "rent_amount",
   "date_of_expiry"
  ],
@@ -23,11 +25,25 @@
    "in_list_view": 1,
    "label": "Date of expiry",
    "reqd": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "label": "Shop",
+   "options": "Shop",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-01 17:45:59.178315",
+ "modified": "2024-05-01 17:55:17.106856",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Contract",

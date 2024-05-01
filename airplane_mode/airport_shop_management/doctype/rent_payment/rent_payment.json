@@ -5,7 +5,10 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "shop"
+  "tenant",
+  "shop",
+  "payment_date",
+  "amount"
  ],
  "fields": [
   {
@@ -13,11 +16,31 @@
    "fieldtype": "Link",
    "label": "Shop",
    "options": "Shop"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-01 17:46:41.133191",
+ "modified": "2024-05-01 17:57:07.007854",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Rent Payment",
