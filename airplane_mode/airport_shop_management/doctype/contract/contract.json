@@ -1,53 +1,35 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-30 13:20:11.932921",
- "default_view": "List",
+ "creation": "2024-05-01 17:45:10.233949",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "tenant",
-  "contract_years",
   "rent_amount",
-  "expiry_date"
+  "date_of_expiry"
  ],
  "fields": [
   {
-   "fieldname": "tenant",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Tenant",
-   "options": "Tenant",
-   "reqd": 1
-  },
-  {
-   "fieldname": "contract_years",
-   "fieldtype": "Int",
-   "label": "Contract Years",
-   "non_negative": 1,
-   "reqd": 1
-  },
-  {
-   "fieldname": "expiry_date",
-   "fieldtype": "Date",
-   "label": "Expiry Date",
-   "reqd": 1
-  },
-  {
-   "description": "Per month rent amount",
    "fieldname": "rent_amount",
    "fieldtype": "Int",
-   "label": "Rent Amount",
+   "in_list_view": 1,
+   "label": "Rent amount",
    "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_expiry",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of expiry",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 13:25:08.724019",
+ "modified": "2024-05-01 17:45:59.178315",
  "modified_by": "Administrator",
- "module": "airport shop management",
+ "module": "Airport Shop Management",
  "name": "Contract",
  "owner": "Administrator",
  "permissions": [
