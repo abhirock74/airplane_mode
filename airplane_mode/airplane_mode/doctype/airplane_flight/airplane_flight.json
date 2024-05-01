@@ -1,0 +1,280 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "format:{airplane}-{MM}-{YYYY}-{#####}",
+ "creation": "2023-08-13 12:27:12.388092",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "flight_details_section",
+  "airplane",
+  "airline",
+  "date_of_departure",
+  "time_of_departure",
+  "column_break_rmtm",
+  "duration",
+  "status",
+  "seat",
+  "is_published",
+  "route",
+  "amended_from",
+  "airport_details_section",
+  "source_airport",
+  "source_airport_code",
+  "source_gate",
+  "column_break_gmsi",
+  "destination_airport",
+  "destination_airport_code",
+  "destination_gate",
+  "crew_members_details_section",
+  "pilot",
+  "co_pilot",
+  "column_break_nvqy",
+  "flight_attendants"
+ ],
+ "fields": [
+  {
+   "fieldname": "airplane",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airplane",
+   "options": "Airplane",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_departure",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Departure",
+   "no_copy": 1,
+   "options": "Airplane Flight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time_of_departure",
+   "fieldtype": "Time",
+   "label": "Time of Departure",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration",
+   "no_copy": 1,
+   "options": "Airplane Flight",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Scheduled\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "source_airport",
+   "fieldtype": "Link",
+   "label": "Source Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Airplane Flight",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "destination_airport",
+   "fieldtype": "Link",
+   "label": "Destination Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "seat",
+   "fieldtype": "Data",
+   "label": "Seat",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rmtm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Route"
+  },
+  {
+   "fetch_from": "source_airport.code",
+   "fieldname": "source_airport_code",
+   "fieldtype": "Data",
+   "label": "Source Airport Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "destination_airport.code",
+   "fieldname": "destination_airport_code",
+   "fieldtype": "Data",
+   "label": "Destination Airport Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "flight_details_section",
+   "fieldtype": "Section Break",
+   "label": "Flight Details"
+  },
+  {
+   "fieldname": "crew_members_details_section",
+   "fieldtype": "Section Break",
+   "label": "Crew Members Details"
+  },
+  {
+   "fieldname": "pilot",
+   "fieldtype": "Link",
+   "label": "Pilot",
+   "options": "Pilots",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nvqy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "co_pilot",
+   "fieldtype": "Link",
+   "label": "Co Pilot",
+   "options": "Pilots",
+   "reqd": 1
+  },
+  {
+   "fieldname": "flight_attendants",
+   "fieldtype": "Table MultiSelect",
+   "label": "Flight Attendants",
+   "options": "Flight Attendant Child",
+   "reqd": 1
+  },
+  {
+   "fieldname": "airport_details_section",
+   "fieldtype": "Section Break",
+   "label": "Airport Details"
+  },
+  {
+   "fieldname": "column_break_gmsi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "airplane.airline",
+   "fieldname": "airline",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Airline"
+  },
+  {
+   "fetch_from": ".",
+   "fieldname": "source_gate",
+   "fieldtype": "Select",
+   "label": "Source Gate",
+   "reqd": 1
+  },
+  {
+   "fetch_from": ".",
+   "fieldname": "destination_gate",
+   "fieldtype": "Select",
+   "label": "Destination Gate",
+   "reqd": 1
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Airplane Ticket",
+   "link_fieldname": "flight"
+  }
+ ],
+ "modified": "2023-10-29 11:07:23.513784",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Airplane Flight",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flight Crew Member",
+   "share": 1
+  }
+ ],
+ "route": "flights",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
