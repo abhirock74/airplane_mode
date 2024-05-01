@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-01 18:56:52.901304",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_default_rent",
+  "shop_default_security_deposit",
+  "rent_remider"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_default_rent",
+   "fieldtype": "Int",
+   "label": "Shop Default Rent"
+  },
+  {
+   "default": "0",
+   "fieldname": "rent_remider",
+   "fieldtype": "Check",
+   "label": "Rent Remider"
+  },
+  {
+   "fieldname": "shop_default_security_deposit",
+   "fieldtype": "Int",
+   "label": "Shop Default Security Deposit"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-05-01 19:11:44.073627",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shop Management Config",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
