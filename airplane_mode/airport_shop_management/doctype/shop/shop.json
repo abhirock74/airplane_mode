@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "creation": "2024-05-01 17:43:28.339201",
  "doctype": "DocType",
@@ -9,7 +10,9 @@
   "shop_name",
   "shop_number",
   "area",
-  "status"
+  "status",
+  "is_published",
+  "route"
  ],
  "fields": [
   {
@@ -46,11 +49,24 @@
    "label": "Airport",
    "options": "Airport",
    "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2024-05-01 18:46:20.084704",
+ "modified": "2024-05-02 12:29:09.080721",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Shop",
@@ -70,6 +86,7 @@
    "write": 1
   }
  ],
+ "route": "shop",
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
