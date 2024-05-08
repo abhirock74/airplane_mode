@@ -21,7 +21,7 @@
  "is_hidden": 0,
  "label": "Shop Manage",
  "links": [],
- "modified": "2023-11-05 08:34:22.108054",
+ "modified": "2024-05-02 10:13:19.337261",
  "modified_by": "Administrator",
  "module": "airport shop management",
  "name": "Shop Manage",
@@ -31,7 +31,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 6.0,
+ "sequence_id": 5.0,
  "shortcuts": [
   {
    "color": "Grey",

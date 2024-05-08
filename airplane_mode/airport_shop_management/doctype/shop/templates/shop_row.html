@@ -1,6 +1,13 @@
-<div>
-	{% if doc.status =="Booked" and doc.is_published %}
-	<a href="{{ doc.route }}">{{ doc.shop_name}}</a>
+
+<div class="card my-4" style="width: 18rem;">
+	{% if doc.status =="Available" and doc.is_published %}
+	<div class="card-body">
+	  <h5 class="card-title">{{ doc.shop_name }}</h5>
+	  <!-- <p> {{ frappe.format_date(doc.date_of_departure) }} | 
+		{{ doc.time_of_departure}} | {{frappe.utils.format_duration(doc.duration)}}</p> -->
+		<br/>
+		<a href="{{ doc.route }}">View Shops</a>
+	</div>
 	{% endif %}
-</div>
+  </div>
 <!-- this is a sample default list template -->
