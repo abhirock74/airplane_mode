@@ -27,19 +27,31 @@ def execute(filters=None):
         condition_str = f"WHERE airport = {airport}"
     else:
         condition_str = ""
-        
+
     sql_query = f"""
-SELECT
-  'Available' AS status,
-  SUM(CASE WHEN status = 'Available' THEN 1 ELSE 0 END) AS Count
-FROM tabShop
-{condition_str}
-UNION
-SELECT
-  'Booked' AS status,
-  SUM(CASE WHEN status = 'Booked' THEN 1 ELSE 0 END) AS Count
-FROM tabShop
-{condition_str};
-"""
+        SELECT
+            status,
+            count(*) AS Count
+        FROM
+            tabShop
+        {condition_str}
+        group by status;
+    """
     data = frappe.db.sql(sql_query, as_dict=True)
-    return columns, data
+    booked = 0
+    available = 0
+    for d in data:
+        if d.status == 'Occupied':
+            booked = d.Count
+        else:
+            available = d.Count
+    return columns, [
+        {
+            'status':'Available',
+            'Count':available
+        },
+        {
+            'status':'Booked',
+            'Count':booked
+        }
+    ]

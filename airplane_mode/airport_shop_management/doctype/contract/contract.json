@@ -1,180 +1,183 @@
 {
-    "actions": [],
-    "allow_rename": 1,
-    "autoname": "format:{airport}-{shop_number}",
-    "creation": "2024-05-01 17:45:10.233949",
-    "doctype": "DocType",
-    "engine": "InnoDB",
-    "field_order": [
-        "airport",
-        "shop",
-        "shop_number",
-        "shop_area_sq_ft",
-        "column_break_yqhn",
-        "tenant",
-        "tenant_email",
-        "tenant_phone_number",
-        "state",
-        "pincode",
-        "address1",
-        "address_2",
-        "section_break_enkw",
-        "security_deposit",
-        "to_date",
-        "from_date",
-        "rent_amount",
-        "status"
-    ],
-    "fields": [
-        {
-            "default": "0",
-            "fieldname": "rent_amount",
-            "fieldtype": "Int",
-            "in_list_view": 1,
-            "label": "Monthly Rent Amount (INR)",
-            "non_negative": 1,
-            "reqd": 1
-        },
-        {
-            "fieldname": "tenant",
-            "fieldtype": "Link",
-            "in_list_view": 1,
-            "label": "Tenant",
-            "options": "Tenant",
-            "reqd": 1
-        },
-        {
-            "fieldname": "shop",
-            "fieldtype": "Link",
-            "in_list_view": 1,
-            "label": "Shop",
-            "options": "Shop",
-            "reqd": 1
-        },
-        {
-            "fieldname": "from_date",
-            "fieldtype": "Date",
-            "in_list_view": 1,
-            "label": "From Date",
-            "reqd": 1
-        },
-        {
-            "fieldname": "to_date",
-            "fieldtype": "Date",
-            "in_list_view": 1,
-            "label": "To Date",
-            "reqd": 1
-        },
-        {
-            "default": "0",
-            "fieldname": "security_deposit",
-            "fieldtype": "Int",
-            "label": "Security Deposit (INR)",
-            "reqd": 1
-        },
-        {
-            "fieldname": "airport",
-            "fieldtype": "Link",
-            "in_list_view": 1,
-            "label": "Airport",
-            "options": "Airport",
-            "reqd": 1
-        },
-        {
-            "fetch_from": "shop.shop_number",
-            "fieldname": "shop_number",
-            "fieldtype": "Data",
-            "label": "Shop Number"
-        },
-        {
-            "fetch_from": "shop.area",
-            "fieldname": "shop_area_sq_ft",
-            "fieldtype": "Data",
-            "label": "Shop Area (sq ft)"
-        },
-        {
-            "fetch_from": "tenant.email",
-            "fieldname": "tenant_email",
-            "fieldtype": "Data",
-            "label": "Tenant Email"
-        },
-        {
-            "fetch_from": "tenant.phone_number",
-            "fieldname": "tenant_phone_number",
-            "fieldtype": "Data",
-            "label": "Tenant Phone Number"
-        },
-        {
-            "fieldname": "column_break_yqhn",
-            "fieldtype": "Column Break"
-        },
-        {
-            "fieldname": "section_break_enkw",
-            "fieldtype": "Section Break"
-        },
-        {
-            "default": "Active",
-            "fieldname": "status",
-            "fieldtype": "Select",
-            "label": "Status",
-            "options": "Active\nInActive\nExpired"
-        },
-        {
-            "fetch_from": "tenant.state",
-            "fieldname": "state",
-            "fieldtype": "Data",
-            "label": "State"
-        },
-        {
-            "fetch_from": "tenant.pincode",
-            "fieldname": "pincode",
-            "fieldtype": "Data",
-            "hidden": 1,
-            "label": "Pincode"
-        },
-        {
-            "fetch_from": "tenant.address",
-            "fieldname": "address1",
-            "fieldtype": "Data",
-            "hidden": 1,
-            "label": "Address 1"
-        },
-        {
-            "fetch_from": "tenant.address_2",
-            "fieldname": "address_2",
-            "fieldtype": "Data",
-            "hidden": 1,
-            "label": "Address 2"
-        }
-    ],
-    "index_web_pages_for_search": 1,
-    "links": [
-        {
-            "link_doctype": "Rent Payment",
-            "link_fieldname": "contract"
-        }
-    ],
-    "modified": "2024-05-01 23:27:11.173990",
-    "modified_by": "Administrator",
-    "module": "Airport Shop Management",
-    "name": "Contract",
-    "naming_rule": "Expression",
-    "owner": "Administrator",
-    "permissions": [
-        {
-            "create": 1,
-            "delete": 1,
-            "email": 1,
-            "export": 1,
-            "print": 1,
-            "read": 1,
-            "report": 1,
-            "role": "System Manager",
-            "share": 1,
-            "write": 1
-        }
-    ],
-    "sort_field": "modified",
-    "sort_order": "DESC",
-    "states": []
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop_number}-{tenant_phone_number}",
+ "creation": "2024-05-01 17:45:10.233949",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "airport",
+  "shop",
+  "shop_number",
+  "shop_area_sq_ft",
+  "column_break_yqhn",
+  "tenant",
+  "tenant_email",
+  "tenant_phone_number",
+  "state",
+  "pincode",
+  "address1",
+  "address_2",
+  "section_break_enkw",
+  "security_deposit",
+  "to_date",
+  "from_date",
+  "rent_amount",
+  "status"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "rent_amount",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Monthly Rent Amount (INR)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Shop",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "security_deposit",
+   "fieldtype": "Int",
+   "label": "Security Deposit (INR)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.shop_number",
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "label": "Shop Number"
+  },
+  {
+   "fetch_from": "shop.area",
+   "fieldname": "shop_area_sq_ft",
+   "fieldtype": "Data",
+   "label": "Shop Area (sq ft)"
+  },
+  {
+   "fetch_from": "tenant.email",
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "label": "Tenant Email"
+  },
+  {
+   "fetch_from": "tenant.phone_number",
+   "fieldname": "tenant_phone_number",
+   "fieldtype": "Data",
+   "label": "Tenant Phone Number"
+  },
+  {
+   "fieldname": "column_break_yqhn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_enkw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInActive\nExpired"
+  },
+  {
+   "fetch_from": "tenant.state",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fetch_from": "tenant.pincode",
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Pincode"
+  },
+  {
+   "fetch_from": "tenant.address",
+   "fieldname": "address1",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Address 1"
+  },
+  {
+   "fetch_from": "tenant.address_2",
+   "fieldname": "address_2",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Address 2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Rent Payment",
+   "link_fieldname": "contract"
+  }
+ ],
+ "modified": "2024-05-08 15:13:09.448943",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Contract",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "shop,shop_number",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "shop_number"
 }
