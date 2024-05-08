@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"DaBFyRt1c4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airport Shop</span>\",\"col\":12}},{\"id\":\"PQ1u-X5un6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shop\",\"col\":3}},{\"id\":\"Imcr6l9YMO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tenant\",\"col\":3}},{\"id\":\"AQl9cvYHEY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Contact\",\"col\":3}},{\"id\":\"S_qJRZejzS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent Payment\",\"col\":3}}]",
+ "content": "[{\"id\":\"DaBFyRt1c4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airport Shop</span>\",\"col\":12}},{\"id\":\"PQ1u-X5un6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shop\",\"col\":3}},{\"id\":\"Imcr6l9YMO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tenant\",\"col\":3}},{\"id\":\"AQl9cvYHEY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Contract\",\"col\":3}},{\"id\":\"S_qJRZejzS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent Payment\",\"col\":3}}]",
  "creation": "2024-05-01 17:32:50.229101",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Airport Shop",
  "links": [],
- "modified": "2024-05-01 17:48:30.308364",
+ "modified": "2024-05-01 23:41:58.761900",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airport Shop",
@@ -36,16 +36,16 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Tenant",
-   "link_to": "Tenant",
+   "label": "Contract",
+   "link_to": "Contract",
    "stats_filter": "[]",
    "type": "DocType"
   },
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Contact",
-   "link_to": "Contact",
+   "label": "Tenant",
+   "link_to": "Tenant",
    "stats_filter": "[]",
    "type": "DocType"
   },

@@ -13,15 +13,16 @@
   "tenant",
   "tenant_email",
   "tenant_phone_number",
-  "tenant_address",
+  "state",
+  "pincode",
+  "address1",
+  "address_2",
   "section_break_enkw",
   "security_deposit",
   "to_date",
   "from_date",
   "rent_amount",
-  "status",
-  "payment_tab",
-  "monthly_rent"
+  "status"
  ],
  "fields": [
   {
@@ -103,12 +104,6 @@
    "label": "Tenant Phone Number"
   },
   {
-   "fetch_from": "tenant.address",
-   "fieldname": "tenant_address",
-   "fieldtype": "Data",
-   "label": "Tenant Address"
-  },
-  {
    "fieldname": "column_break_yqhn",
    "fieldtype": "Column Break"
   },
@@ -124,20 +119,41 @@
    "options": "Active\nInActive\nExpired"
   },
   {
-   "fieldname": "payment_tab",
-   "fieldtype": "Tab Break",
-   "label": "Payment"
+   "fetch_from": "tenant.state",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
   },
   {
-   "fieldname": "monthly_rent",
-   "fieldtype": "Table",
-   "label": "Monthly Rent",
-   "options": "Rent Payment"
+   "fetch_from": "tenant.pincode",
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Pincode"
+  },
+  {
+   "fetch_from": "tenant.address",
+   "fieldname": "address1",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Address 1"
+  },
+  {
+   "fetch_from": "tenant.address_2",
+   "fieldname": "address_2",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Address 2"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-05-01 21:40:00.564133",
+ "links": [
+  {
+   "link_doctype": "Rent Payment",
+   "link_fieldname": "contract"
+  }
+ ],
+ "modified": "2024-05-01 23:27:11.173990",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Contract",
