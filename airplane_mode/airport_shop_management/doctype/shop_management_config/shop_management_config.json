@@ -7,7 +7,8 @@
  "field_order": [
   "shop_default_rent",
   "shop_default_security_deposit",
-  "rent_remider"
+  "rent_remider",
+  "datetime"
  ],
  "fields": [
   {
@@ -25,12 +26,17 @@
    "fieldname": "shop_default_security_deposit",
    "fieldtype": "Int",
    "label": "Shop Default Security Deposit"
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "label": "Datetime"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-05-01 19:11:44.073627",
+ "modified": "2024-05-09 14:14:55.661838",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Shop Management Config",

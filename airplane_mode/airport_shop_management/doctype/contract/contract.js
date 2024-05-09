@@ -58,10 +58,19 @@ frappe.ui.form.on("Contract", {
 frappe.ui.form.on('Rent Payment', {
   form_render: async function (frm, cdt, cdn) {
   },
-  monthly_rent_add: function(frm,cdt,cdn) {
+  payment_add: function(frm,cdt,cdn) {
     let row = frappe.get_doc(cdt, cdn);
     row.amount = frm.doc.rent_amount;
-    frm.refresh_field("monthly_rent");
- }  
+    frm.refresh_field("payment");
+  },
+  payment_date:(frm, cdt, cdn)=>{
+    let row = frappe.get_doc(cdt, cdn);
+    let paid = frm.doc.payment.find(f=> !f.__islocal && row.payment_date && (f.payment_date.slice(0, 7) == row.payment_date.slice(0, 7)) )
+    if(paid){
+      row.payment_date = '';
+      frm.refresh_field("payment_date");
+      frappe.throw(`You have already make payment for this month.`)
+    }
+  }
 });
 

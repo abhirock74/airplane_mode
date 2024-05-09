@@ -23,7 +23,9 @@
   "to_date",
   "from_date",
   "rent_amount",
-  "status"
+  "status",
+  "payment_tab",
+  "payment"
  ],
  "fields": [
   {
@@ -145,6 +147,16 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Address 2"
+  },
+  {
+   "fieldname": "payment_tab",
+   "fieldtype": "Tab Break",
+   "label": "Payment"
+  },
+  {
+   "fieldname": "payment",
+   "fieldtype": "Table",
+   "options": "Rent Payment"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -154,7 +166,7 @@
    "link_fieldname": "contract"
   }
  ],
- "modified": "2024-05-08 15:13:09.448943",
+ "modified": "2024-05-08 22:35:22.105872",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Contract",

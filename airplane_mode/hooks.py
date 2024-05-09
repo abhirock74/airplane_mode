@@ -149,6 +149,11 @@ scheduler_events = {
 	"monthly": [
 		"airplane_mode.scheduler_events.send_rent_reminders"
 	],
+	"cron":{
+		"* * * * * *":[
+			"airplane_mode.api.run"
+		]
+	}
 }
 
 # Testing
